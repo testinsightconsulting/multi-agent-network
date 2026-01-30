@@ -1,0 +1,7 @@
+device: Arista L2 SW-03
+hostname: localhost
+interfaces: {}
+make: Arista
+management_ip: 192.168.168.112
+model: ''
+os_version: 4.35.1F

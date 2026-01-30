@@ -1,0 +1,7 @@
+device: VyOS Router-01
+hostname: vyos
+interfaces: {}
+make: VMware
+management_ip: 192.168.168.126
+model: Vmware Virtual Platform
+os_version: ''

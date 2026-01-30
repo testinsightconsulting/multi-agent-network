@@ -1,0 +1,808 @@
+tosca_definitions_version: tosca_simple_yaml_1_0
+imports:
+- velocity_types_1_0.yaml
+topology_template:
+  node_templates:
+    topology:
+      type: com.spirent.velocity.Topology
+      properties:
+        name: Layer-Layer3 Crossover
+        isSharedAccess: true
+        custom_properties:
+        - name: emulation
+          value: enabled
+          vendor: com.fnfr
+    port_i549898da-19d4-4662-b087-c9a68c05643c:
+      type: com.spirent.velocity.Port
+      properties:
+        id: i549898da-19d4-4662-b087-c9a68c05643c
+        name: port1
+        inventory_id: 32db71be-d538-43c3-b193-06ae1e6dd610
+        inventory_name: port1
+        shared: false
+        skip_validation: false
+        nestedCoordinates: ''
+        connectivity: CONNECTED
+        property_groups:
+        - name: System Identification
+          group:
+          - id: fb81fbde-2286-4323-bc10-363154a153fa
+            value_label: ''
+            description: ''
+            name: portNumber
+            value: port1
+            vendor: ''
+            type: TEXT
+          - id: 74e9376b-61d5-d3b3-eba5-0b1c1a51418b
+            value_label: ''
+            description: ''
+            name: Port Type
+            value: Ethernet
+            vendor: ''
+            type: TEXT
+          - id: e9ef57f7-311b-b299-5c47-dd30d95c8511
+            value_label: ''
+            description: ''
+            name: Port Speed
+            value: '1000'
+            vendor: ''
+            type: INTEGER
+        reservation_time: IMMEDIATE
+        utilization_type: EXCLUSIVE
+      requirements:
+      - device: device_ife0ed973-81db-4d15-87c4-f9a404636a95
+    port_i3efeee47-920c-46bd-9d10-e1e02aea7a03:
+      type: com.spirent.velocity.Port
+      properties:
+        id: i3efeee47-920c-46bd-9d10-e1e02aea7a03
+        name: port2
+        inventory_id: b3304b4f-7ad9-40b7-af49-2fdd76628a90
+        inventory_name: port2
+        shared: false
+        skip_validation: false
+        nestedCoordinates: ''
+        connectivity: CONNECTED
+        property_groups:
+        - name: System Identification
+          group:
+          - id: 790ca0d0-e814-472c-aaa6-3064293bc89e
+            value_label: ''
+            description: ''
+            name: portNumber
+            value: port2
+            vendor: ''
+            type: TEXT
+          - id: a4227eb1-84aa-768b-c677-257668bc5dcf
+            value_label: ''
+            description: ''
+            name: Port Type
+            value: Ethernet
+            vendor: ''
+            type: TEXT
+          - id: f9309ec7-7c03-c06c-2003-7fbc62252c42
+            value_label: ''
+            description: ''
+            name: Port Speed
+            value: '1000'
+            vendor: ''
+            type: INTEGER
+        reservation_time: IMMEDIATE
+        utilization_type: EXCLUSIVE
+      requirements:
+      - device: device_ife0ed973-81db-4d15-87c4-f9a404636a95
+    device_ife0ed973-81db-4d15-87c4-f9a404636a95:
+      type: com.spirent.velocity.Device
+      properties:
+        id: ife0ed973-81db-4d15-87c4-f9a404636a95
+        name: vSTC-03
+        inventory_id: 350fba3c-85cf-4b4b-8828-282ed1fef69b
+        inventory_name: vSTC-03
+        description: |
+          IS STCv 5.58 - 3
+
+          Serial Number         : SPIRENTVIRTUAL
+          Part Number           : 80-000003-X86
+          Version               : 5.58.1196
+        shared: true
+        skip_validation: false
+        boundary:
+          height: 72
+          width: 200
+          x: 100
+          y: 268
+        icon_id: 81c661f0-1ba0-416d-a386-202821f33150
+        icon_uri: ilo://api/repository/v2/asset/81c661f0-1ba0-416d-a386-202821f33150?rasterizedIconSize=64
+        nestedCoordinates: ''
+        custom_properties:
+        - id: ''
+          value_label: ''
+          description: ''
+          name: isIconVisible
+          value: 'true'
+          vendor: ''
+        - id: ''
+          value_label: ''
+          description: ''
+          name: color
+          value: WHITE
+          vendor: ''
+        - id: ''
+          value_label: ''
+          description: ''
+          name: borderColor
+          value: SILVER
+          vendor: ''
+        property_groups:
+        - name: System Identification
+          group:
+          - id: f155481f-573b-4043-ae0f-80856f083e9a
+            value_label: ''
+            description: ''
+            name: ipAddress
+            value: 192.168.168.220
+            vendor: ''
+            type: TEXT
+          - id: 33e2f773-f761-4137-9447-db072c56f63a
+            value_label: ''
+            description: ''
+            name: Hostname
+            value: STCv-192-168-168-220
+            vendor: ''
+            type: TEXT
+          - id: 9fd0a9ea-e372-4459-a4fe-baadd3a45428
+            value_label: ''
+            description: ''
+            name: Make
+            value: Spirent
+            vendor: ''
+            type: TEXT
+          - id: 1f05a9dc-570d-5a41-2c5a-6160c17640b2
+            value_label: ''
+            description: ''
+            name: Model
+            value: ''
+            vendor: ''
+            type: TEXT
+          - id: 93cb6e41-7dbc-9009-7c5f-f144e04f4f45
+            value_label: ''
+            description: ''
+            name: Serial Number
+            value: ''
+            vendor: ''
+            type: TEXT
+          - id: 11e89365-93fa-3982-c749-7a311ce6c90d
+            value_label: ''
+            description: ''
+            name: Console server
+            value: ''
+            vendor: ''
+            type: TEXT
+        - name: Location Information
+          group:
+          - id: fa66276d-402a-7fff-3bff-c30a2bdfb7d0
+            value_label: ''
+            description: ''
+            name: Facility
+            value: ''
+            vendor: ''
+            type: TEXT
+          - id: 07b5b9b4-3f2e-864c-84e7-ea82639c0985
+            value_label: ''
+            description: ''
+            name: Room
+            value: ''
+            vendor: ''
+            type: TEXT
+          - id: b44ff79d-1171-2da9-2eb8-b548ea090408
+            value_label: ''
+            description: ''
+            name: Floor Position
+            value: ''
+            vendor: ''
+            type: TEXT
+        - name: Credentials
+          group:
+          - id: 8de62370-a09e-404b-a62a-8dc61dc44eb7
+            value_label: ''
+            description: ''
+            name: username
+            value: admin
+            vendor: ''
+            type: TEXT
+          - id: 4029ec97-3129-4693-b9a2-ac370f7fdefb
+            value_label: ''
+            description: ''
+            name: password
+            value: spt_admin
+            vendor: ''
+            type: PASSWORD
+        shape: RECTANGLE
+        reservation_time: IMMEDIATE
+        utilization_type: EXCLUSIVE
+    port_i9b8b636b-0201-4ee5-90f8-b8a8a1ba5f65:
+      type: com.spirent.velocity.Port
+      properties:
+        id: i9b8b636b-0201-4ee5-90f8-b8a8a1ba5f65
+        name: eth1
+        inventory_id: cb959f17-2d44-4afa-aa05-39c353b512bb
+        inventory_name: eth1
+        shared: false
+        skip_validation: false
+        nestedCoordinates: ''
+        connectivity: CONNECTED
+        property_groups:
+        - name: System Identification
+          group:
+          - id: 90dddac7-9d23-4a58-99de-e20dd76ab7ba
+            value_label: ''
+            description: ''
+            name: portNumber
+            value: eth1
+            vendor: ''
+            type: TEXT
+          - id: 1d8e753e-8a0a-c643-013c-b871095bb18b
+            value_label: ''
+            description: ''
+            name: Port Type
+            value: Ethernet
+            vendor: ''
+            type: TEXT
+          - id: 2d32daa1-516e-5399-0b0d-0b32446d98b7
+            value_label: ''
+            description: ''
+            name: Port Speed
+            value: '1000'
+            vendor: ''
+            type: INTEGER
+        reservation_time: IMMEDIATE
+        utilization_type: EXCLUSIVE
+      requirements:
+      - device: device_ic847256e-bd77-468f-a1fc-226c895aac76
+    port_id6c7245d-b92a-4d43-934e-99eda6335955:
+      type: com.spirent.velocity.Port
+      properties:
+        id: id6c7245d-b92a-4d43-934e-99eda6335955
+        name: eth2
+        inventory_id: 29c8d203-464d-40d6-86ea-3626fb0cd3c4
+        inventory_name: eth2
+        shared: false
+        skip_validation: false
+        nestedCoordinates: ''
+        connectivity: CONNECTED
+        property_groups:
+        - name: System Identification
+          group:
+          - id: 06bc8596-f804-49ea-8b6e-c7b0dd551c76
+            value_label: ''
+            description: ''
+            name: portNumber
+            value: eth2
+            vendor: ''
+            type: TEXT
+          - id: 69e890f6-126d-a019-137a-90d4695bf9ba
+            value_label: ''
+            description: ''
+            name: Port Type
+            value: Ethernet
+            vendor: ''
+            type: TEXT
+          - id: fd6f550c-0009-8878-d2e8-4deed60147bf
+            value_label: ''
+            description: ''
+            name: Port Speed
+            value: '1000'
+            vendor: ''
+            type: INTEGER
+        reservation_time: IMMEDIATE
+        utilization_type: EXCLUSIVE
+      requirements:
+      - device: device_ic847256e-bd77-468f-a1fc-226c895aac76
+    device_ic847256e-bd77-468f-a1fc-226c895aac76:
+      type: com.spirent.velocity.Device
+      properties:
+        id: ic847256e-bd77-468f-a1fc-226c895aac76
+        name: VyOS Router-01
+        inventory_id: 9ca9b0fb-b017-4d99-8cb3-f3e810083886
+        inventory_name: VyOS Router-01
+        description: |
+          IS VyOS Router
+
+          Version:          VyOS 2026.01.14-0022-rolling
+
+          Build UUID:       fec3af23-2500-4f32-a1a5-d2d89908057d
+          Build commit ID:  5667462b8db072
+          Hardware S/N:     VMware-56 4d 0b 7f 5f 57 20 75-c9 58 6b 17 95 01 9b a9
+          Hardware UUID:    7f0b4d56-575f-7520-c958-6b1795019ba9
+        shared: true
+        skip_validation: false
+        boundary:
+          height: 72
+          width: 200
+          x: 440
+          y: 428
+        icon_id: 8c6ef6d8-a654-45a5-991d-036126dea414
+        icon_uri: ilo://api/repository/v2/asset/8c6ef6d8-a654-45a5-991d-036126dea414?rasterizedIconSize=64
+        nestedCoordinates: ''
+        custom_properties:
+        - id: ''
+          value_label: ''
+          description: ''
+          name: isIconVisible
+          value: 'true'
+          vendor: ''
+        - id: ''
+          value_label: ''
+          description: ''
+          name: color
+          value: WHITE
+          vendor: ''
+        - id: ''
+          value_label: ''
+          description: ''
+          name: borderColor
+          value: SILVER
+          vendor: ''
+        property_groups:
+        - name: System Identification
+          group:
+          - id: 4cd69eac-f645-4bfa-aefe-5b026ef2783f
+            value_label: ''
+            description: ''
+            name: ipAddress
+            value: 192.168.168.126
+            vendor: ''
+            type: TEXT
+          - id: 01ad648b-6215-410d-a4e8-62d03e3d53ed
+            value_label: ''
+            description: ''
+            name: Hostname
+            value: vyos
+            vendor: ''
+            type: TEXT
+          - id: 23f3b8cc-6fbf-4fae-bb35-0c9f8c932231
+            value_label: ''
+            description: ''
+            name: Make
+            value: VMware
+            vendor: ''
+            type: TEXT
+          - id: f1e91bdf-c944-4aaf-aba8-efb79520ee8c
+            value_label: ''
+            description: ''
+            name: Model
+            value: Vmware Virtual Platform
+            vendor: ''
+            type: TEXT
+          - id: 475af840-5dd2-ea28-5a43-466b3bea9b61
+            value_label: ''
+            description: ''
+            name: Serial Number
+            value: ''
+            vendor: ''
+            type: TEXT
+          - id: 4b4057e3-eb4f-f4d4-a149-f0eaaa2bda84
+            value_label: ''
+            description: ''
+            name: Console server
+            value: ''
+            vendor: ''
+            type: TEXT
+        - name: Location Information
+          group:
+          - id: d6bb8865-d93f-dd5a-c0f7-d59061f63145
+            value_label: ''
+            description: ''
+            name: Facility
+            value: ''
+            vendor: ''
+            type: TEXT
+          - id: ad62de73-9ace-3a49-2e8a-8b4ff943313f
+            value_label: ''
+            description: ''
+            name: Room
+            value: ''
+            vendor: ''
+            type: TEXT
+          - id: 7bc671ea-78a6-33ec-ceb3-a0526b13f25f
+            value_label: ''
+            description: ''
+            name: Floor Position
+            value: ''
+            vendor: ''
+            type: TEXT
+        - name: Credentials
+          group:
+          - id: 5de0f6bd-7c01-452a-a689-7d1df345f109
+            value_label: ''
+            description: ''
+            name: username
+            value: vyos
+            vendor: ''
+            type: TEXT
+          - id: bae8d1ff-769d-4d0d-ad58-29744d5159dc
+            value_label: ''
+            description: ''
+            name: password
+            value: vyos
+            vendor: ''
+            type: PASSWORD
+        shape: RECTANGLE
+        reservation_time: IMMEDIATE
+        utilization_type: SHARED
+    port_i75f1c6be-2fb6-45ac-9f56-d5d8baf1ad88:
+      type: com.spirent.velocity.Port
+      properties:
+        id: i75f1c6be-2fb6-45ac-9f56-d5d8baf1ad88
+        name: Ethernet2
+        inventory_id: ce6b8179-d69c-47ad-8084-0bb39aee63dd
+        inventory_name: Ethernet2
+        shared: false
+        skip_validation: false
+        nestedCoordinates: ''
+        connectivity: CONNECTED
+        property_groups:
+        - name: System Identification
+          group:
+          - id: db1f57eb-b13b-452f-b555-ed2f4e14a31c
+            value_label: ''
+            description: ''
+            name: portNumber
+            value: Ethernet2
+            vendor: ''
+            type: TEXT
+          - id: ee8a3936-e43a-72bb-2c81-913fc9109b14
+            value_label: ''
+            description: ''
+            name: Port Type
+            value: Ethernet
+            vendor: ''
+            type: TEXT
+          - id: 32780f7f-120b-a919-effe-2507dedcbecc
+            value_label: ''
+            description: ''
+            name: Port Speed
+            value: '1000'
+            vendor: ''
+            type: INTEGER
+        reservation_time: IMMEDIATE
+        utilization_type: EXCLUSIVE
+      requirements:
+      - device: device_iba457fde-1376-4aca-843c-e8786d02d108
+    port_i7be0b36d-8da2-47a3-9a3c-be7f8c2af404:
+      type: com.spirent.velocity.Port
+      properties:
+        id: i7be0b36d-8da2-47a3-9a3c-be7f8c2af404
+        name: Ethernet1
+        inventory_id: 21abe80c-fa22-495a-902d-3aefe2e77e53
+        inventory_name: Ethernet1
+        shared: false
+        skip_validation: false
+        nestedCoordinates: ''
+        connectivity: CONNECTED
+        property_groups:
+        - name: System Identification
+          group:
+          - id: 124416aa-69fa-47d1-867b-9e50cc1c964b
+            value_label: ''
+            description: ''
+            name: portNumber
+            value: Ethernet1
+            vendor: ''
+            type: TEXT
+          - id: f851f768-1ae2-7b5b-0cf8-0d1ba265dc5c
+            value_label: ''
+            description: ''
+            name: Port Type
+            value: Ethernet
+            vendor: ''
+            type: TEXT
+          - id: 9a669689-8bfb-84a4-11c9-fd0f9433e41d
+            value_label: ''
+            description: ''
+            name: Port Speed
+            value: '1000'
+            vendor: ''
+            type: INTEGER
+        reservation_time: IMMEDIATE
+        utilization_type: EXCLUSIVE
+      requirements:
+      - device: device_iba457fde-1376-4aca-843c-e8786d02d108
+    device_iba457fde-1376-4aca-843c-e8786d02d108:
+      type: com.spirent.velocity.Device
+      properties:
+        id: iba457fde-1376-4aca-843c-e8786d02d108
+        name: Arista L2 SW-03
+        inventory_id: f27b7f8e-6fcd-4133-98ba-c4e6810a0f8f
+        inventory_name: Arista L2 SW-03
+        description: |
+          IS Arista L2 SW-03
+
+          Serial number: 03E99B230652626F9653779C1C13C3BE
+          Hardware MAC address: 000c.2949.396f
+          System MAC address: 000c.2949.396f
+
+          Software image version: 4.35.1F
+          Architecture: x86_64
+          Internal build version: 4.35.1F-45295350.4351F.1
+          Internal build ID: 183698dc-edc2-405a-baa0-ff096287bf99
+        shared: true
+        skip_validation: false
+        boundary:
+          height: 72
+          width: 200
+          x: 440
+          y: 108
+        icon_uri: ilo://api/0/resource/icon?id=f27b7f8e-6fcd-4133-98ba-c4e6810a0f8f
+        nestedCoordinates: ''
+        custom_properties:
+        - id: ''
+          value_label: ''
+          description: ''
+          name: isIconVisible
+          value: 'false'
+          vendor: ''
+        - id: ''
+          value_label: ''
+          description: ''
+          name: color
+          value: WHITE
+          vendor: ''
+        - id: ''
+          value_label: ''
+          description: ''
+          name: borderColor
+          value: SILVER
+          vendor: ''
+        property_groups:
+        - name: System Identification
+          group:
+          - id: 3227f8a1-93a4-489a-a8aa-92026fa2b5d3
+            value_label: ''
+            description: ''
+            name: ipAddress
+            value: 192.168.168.112
+            vendor: ''
+            type: TEXT
+          - id: 05a70da0-8966-4b56-bbe2-70dbf0757f51
+            value_label: ''
+            description: ''
+            name: Hostname
+            value: localhost
+            vendor: ''
+            type: TEXT
+          - id: 941f910a-8088-419a-877c-d3a47a2f4742
+            value_label: ''
+            description: ''
+            name: Make
+            value: Arista
+            vendor: ''
+            type: TEXT
+          - id: 261f2127-b6c8-c270-06ff-599fd82237ed
+            value_label: ''
+            description: ''
+            name: Model
+            value: ''
+            vendor: ''
+            type: TEXT
+          - id: 7ce1ed6c-431c-4147-8140-df697fac4791
+            value_label: ''
+            description: ''
+            name: Serial Number
+            value: 03E99B230652626F9653779C1C13C3BE
+            vendor: ''
+            type: TEXT
+          - id: 514549e4-febc-b0ee-6a6c-baccb5bad64d
+            value_label: ''
+            description: ''
+            name: Console server
+            value: ''
+            vendor: ''
+            type: TEXT
+          - id: 4861e21a-b03b-499b-b80e-8d12e0a19743
+            value_label: ''
+            description: ''
+            name: OS Version
+            value: 4.35.1F
+            vendor: ''
+            type: TEXT
+        - name: Location Information
+          group:
+          - id: f7c3be68-1eeb-1dc8-7ee8-58740830944c
+            value_label: ''
+            description: ''
+            name: Facility
+            value: ''
+            vendor: ''
+            type: TEXT
+          - id: a1ae3286-7acf-728b-1a21-5e5ad50853a1
+            value_label: ''
+            description: ''
+            name: Room
+            value: ''
+            vendor: ''
+            type: TEXT
+          - id: 9339d804-1984-8e32-7550-07e98ba80b56
+            value_label: ''
+            description: ''
+            name: Floor Position
+            value: ''
+            vendor: ''
+            type: TEXT
+        - name: Credentials
+          group:
+          - id: 572d8759-13c3-4602-9001-79688f4cf095
+            value_label: ''
+            description: ''
+            name: username
+            value: admin
+            vendor: ''
+            type: TEXT
+          - id: 9796bd4a-2819-414e-993c-40a9625ba424
+            value_label: ''
+            description: ''
+            name: password
+            value: admin
+            vendor: ''
+            type: PASSWORD
+        shape: RECTANGLE
+        reservation_time: IMMEDIATE
+        utilization_type: EXCLUSIVE
+    ethernet_link_icf800e55-1d1c-4b13-bdff-b23fc1c62fa4:
+      type: com.spirent.velocity.EthernetLink
+      properties:
+        id: icf800e55-1d1c-4b13-bdff-b23fc1c62fa4
+        name: Link 1
+        line_style: LINEAL
+        bidirectional: true
+        property_groups:
+        - name: connectionType
+          group:
+          - id: ''
+            value_label: ''
+            description: ''
+            name: id
+            value: 4875e5b9-694f-d110-5177-95dcaae2598b
+            vendor: ''
+          - id: ''
+            value_label: ''
+            description: ''
+            name: description
+            value: ''
+            vendor: ''
+          - id: ''
+            value_label: ''
+            description: ''
+            name: kind
+            value: L1
+            vendor: ''
+          - id: ''
+            value_label: ''
+            description: ''
+            name: shortcut
+            value: Eth
+            vendor: ''
+          order: 0
+        - name: view
+          group:
+          - id: ''
+            value_label: ''
+            description: ''
+            name: color
+            value: GRAY
+            vendor: ''
+          - id: ''
+            value_label: ''
+            description: ''
+            name: width
+            value: '2'
+            vendor: ''
+          order: 0
+      requirements:
+      - from: port_i7be0b36d-8da2-47a3-9a3c-be7f8c2af404
+      - to: port_i549898da-19d4-4662-b087-c9a68c05643c
+    ethernet_link_i961cb153-4b23-4f87-9216-b3d12dcf67fd:
+      type: com.spirent.velocity.EthernetLink
+      properties:
+        id: i961cb153-4b23-4f87-9216-b3d12dcf67fd
+        name: Link 2
+        line_style: LINEAL
+        bidirectional: true
+        property_groups:
+        - name: connectionType
+          group:
+          - id: ''
+            value_label: ''
+            description: ''
+            name: id
+            value: 4875e5b9-694f-d110-5177-95dcaae2598b
+            vendor: ''
+          - id: ''
+            value_label: ''
+            description: ''
+            name: description
+            value: ''
+            vendor: ''
+          - id: ''
+            value_label: ''
+            description: ''
+            name: kind
+            value: L1
+            vendor: ''
+          - id: ''
+            value_label: ''
+            description: ''
+            name: shortcut
+            value: Eth
+            vendor: ''
+          order: 0
+        - name: view
+          group:
+          - id: ''
+            value_label: ''
+            description: ''
+            name: color
+            value: GRAY
+            vendor: ''
+          - id: ''
+            value_label: ''
+            description: ''
+            name: width
+            value: '2'
+            vendor: ''
+          order: 0
+      requirements:
+      - from: port_i3efeee47-920c-46bd-9d10-e1e02aea7a03
+      - to: port_id6c7245d-b92a-4d43-934e-99eda6335955
+    ethernet_link_i0c310a44-5510-46e1-925e-068d7dc5a244:
+      type: com.spirent.velocity.EthernetLink
+      properties:
+        id: i0c310a44-5510-46e1-925e-068d7dc5a244
+        name: Link 3
+        line_style: LINEAL
+        bidirectional: true
+        property_groups:
+        - name: connectionType
+          group:
+          - id: ''
+            value_label: ''
+            description: ''
+            name: id
+            value: 4875e5b9-694f-d110-5177-95dcaae2598b
+            vendor: ''
+          - id: ''
+            value_label: ''
+            description: ''
+            name: description
+            value: ''
+            vendor: ''
+          - id: ''
+            value_label: ''
+            description: ''
+            name: kind
+            value: L1
+            vendor: ''
+          - id: ''
+            value_label: ''
+            description: ''
+            name: shortcut
+            value: Eth
+            vendor: ''
+          order: 0
+        - name: view
+          group:
+          - id: ''
+            value_label: ''
+            description: ''
+            name: color
+            value: GRAY
+            vendor: ''
+          - id: ''
+            value_label: ''
+            description: ''
+            name: width
+            value: '2'
+            vendor: ''
+          order: 0
+      requirements:
+      - from: port_i75f1c6be-2fb6-45ac-9f56-d5d8baf1ad88
+      - to: port_i9b8b636b-0201-4ee5-90f8-b8a8a1ba5f65

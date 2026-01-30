@@ -1,0 +1,7 @@
+device: SPT-C1-34
+hostname: ''
+interfaces: {}
+make: Spirent
+management_ip: 192.168.168.108
+model: SPT-C1-7
+os_version: ''

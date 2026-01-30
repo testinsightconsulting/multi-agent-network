@@ -1,0 +1,7 @@
+device: vSTC
+hostname: ''
+interfaces: {}
+make: ''
+management_ip: ''
+model: ''
+os_version: ''

@@ -1,0 +1,40 @@
+device: "Access-Switch-01"
+vlans:
+  - vlan_id: 10
+    name: "Management"
+    interfaces: ["GigabitEthernet1/0/1", "GigabitEthernet1/0/2"]
+  - vlan_id: 20
+    name: "Users"
+    interfaces: ["GigabitEthernet1/0/3", "GigabitEthernet1/0/4"]
+  - vlan_id: 30
+    name: "Servers"
+    interfaces: ["GigabitEthernet1/0/5", "GigabitEthernet1/0/6"]
+
+spanning_tree:
+  mode: "rapid-pvst"
+  root_bridge: "32768.00:11:22:33:44:55"
+  priority: 32768
+
+interfaces:
+  GigabitEthernet1/0/1:
+    status: "up"
+    vlan: 10
+    mode: "access"
+  GigabitEthernet1/0/2:
+    status: "up"
+    vlan: 10
+    mode: "access"
+  GigabitEthernet1/0/3:
+    status: "up"
+    vlan: 20
+    mode: "access"
+  GigabitEthernet1/0/4:
+    status: "up"
+    vlan: 20
+    mode: "access"
+  GigabitEthernet1/0/24:
+    status: "up"
+    vlan: "trunk"
+    mode: "trunk"
+    allowed_vlans: [10, 20, 30]
+

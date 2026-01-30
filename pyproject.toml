@@ -1,0 +1,32 @@
+[project]
+name = "multi-agent-network"
+version = "0.1.0"
+description = "Multi-Agent Network Device Management System with AI-powered expert agents"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.3.1",
+    "google-genai>=1.59.0",
+    "nest-asyncio>=1.6.0",
+    "paramiko>=3.4.0",
+    "pydantic>=2.12.5",
+    "python-dotenv>=1.2.1",
+    "pyyaml>=6.0.3",
+    "chromadb>=0.4.0",
+    "pypdf>=5.1.0",
+    "httpx>=0.25.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "ruff>=0.14.13",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["I", "F", "N", "W", "E"]
+ignore = ["E501"]
+

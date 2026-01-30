@@ -1,0 +1,7 @@
+device: vSTC-03
+hostname: STCv-192-168-168-220
+interfaces: {}
+make: Spirent
+management_ip: 192.168.168.220
+model: ''
+os_version: ''

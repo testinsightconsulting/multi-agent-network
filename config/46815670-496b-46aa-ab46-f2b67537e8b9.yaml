@@ -1,0 +1,7 @@
+device: VyOS Router
+hostname: ''
+interfaces: {}
+make: ''
+management_ip: ''
+model: ''
+os_version: ''

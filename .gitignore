@@ -1,0 +1,26 @@
+# Environments
+.env
+.credentials.yaml
+
+# Databases
+*.sqlite3
+*.db
+chroma/
+
+# Binaries/PDFs
+*.pdf
+*.bin
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+
+# IDEs
+.vscode/
+.idea/
+.cursor/
