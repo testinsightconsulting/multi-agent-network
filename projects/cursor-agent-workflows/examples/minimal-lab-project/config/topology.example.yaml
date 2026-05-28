@@ -1,0 +1,11 @@
+topology:
+  name: "Example Lab"
+  agents:
+    - agent_id: router1
+      device_name: Core-Router-01
+      device_type: cisco
+      model: ASR1000
+      os_version: IOS-XE 17.09
+      management_ip: 192.168.1.1
+      commands:
+        show_config: show running-config

@@ -1,7 +1,0 @@
-device: Arista L2 SW
-hostname: ''
-interfaces: {}
-make: ''
-management_ip: ''
-model: ''
-os_version: ''

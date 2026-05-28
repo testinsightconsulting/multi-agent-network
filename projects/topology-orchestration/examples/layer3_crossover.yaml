@@ -1,0 +1,56 @@
+tosca_definitions_version: tosca_simple_yaml_1_0
+topology_template:
+  node_templates:
+    topology:
+      type: com.spirent.velocity.Topology
+      properties:
+        name: Layer3 Crossover (Public Example)
+    device_sw1:
+      type: com.spirent.velocity.Device
+      properties:
+        inventory_id: 33333333-3333-4333-8333-333333333303
+        inventory_name: Switch-1
+        property_groups:
+          - name: System Identification
+            group:
+              - name: Make
+                value: arista
+              - name: Model
+                value: DCS-7050SX
+              - name: ipAddress
+                value: 10.0.1.10
+    port_sw1_eth1:
+      type: com.spirent.velocity.Port
+      properties:
+        inventory_id: 44444444-4444-4444-8444-444444444404
+        inventory_name: Ethernet1
+      requirements:
+        - device: device_sw1
+    port_sw2_eth1:
+      type: com.spirent.velocity.Port
+      properties:
+        inventory_id: 55555555-5555-4555-8555-555555555505
+        inventory_name: Ethernet1
+      requirements:
+        - device: device_sw2
+    link_uplink:
+      type: com.spirent.velocity.EthernetLink
+      properties:
+        name: crossover-link
+      requirements:
+        - from: port_sw1_eth1
+        - to: port_sw2_eth1
+    device_sw2:
+      type: com.spirent.velocity.Device
+      properties:
+        inventory_id: 66666666-6666-4666-8666-666666666606
+        inventory_name: Switch-2
+        property_groups:
+          - name: System Identification
+            group:
+              - name: Make
+                value: arista
+              - name: Model
+                value: DCS-7050SX
+              - name: ipAddress
+                value: 10.0.1.11

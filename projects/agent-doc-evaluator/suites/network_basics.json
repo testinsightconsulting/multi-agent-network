@@ -1,0 +1,51 @@
+{
+  "name": "network_basics_public_sample",
+  "description": "Public sample subset of documentation evaluation cases for agent Q&A.",
+  "test_cases": [
+    {
+      "id": "cisco_ios_xe_version",
+      "platform": "cisco_ios_xe_3850",
+      "category": "version_awareness",
+      "prompt": "How do I verify the installed IOS-XE version on a Catalyst 3850?",
+      "rubric_weights": {
+        "documentation_accuracy": 1.0,
+        "command_validity": 1.2,
+        "completeness": 1.0,
+        "hallucination_resistance": 1.0,
+        "version_awareness": 1.5,
+        "cross_doc_reasoning": 0.5,
+        "clarity": 1.0
+      }
+    },
+    {
+      "id": "esxi_vswitch_compare",
+      "platform": "vmware_esxi_8",
+      "category": "cross_platform",
+      "prompt": "Compare standard vSwitch tagging on ESXi 8 with Cisco trunk configuration.",
+      "rubric_weights": {
+        "documentation_accuracy": 1.0,
+        "command_validity": 0.8,
+        "completeness": 1.0,
+        "hallucination_resistance": 1.0,
+        "version_awareness": 1.0,
+        "cross_doc_reasoning": 1.5,
+        "clarity": 1.0
+      }
+    },
+    {
+      "id": "arista_eos_missing_feature",
+      "platform": "arista_eos",
+      "category": "hallucination_resistance",
+      "prompt": "Does EOS support a hidden BGP feature called ultra-fast-converge-mode?",
+      "rubric_weights": {
+        "documentation_accuracy": 1.2,
+        "command_validity": 0.5,
+        "completeness": 1.0,
+        "hallucination_resistance": 1.5,
+        "version_awareness": 0.8,
+        "cross_doc_reasoning": 0.5,
+        "clarity": 1.0
+      }
+    }
+  ]
+}

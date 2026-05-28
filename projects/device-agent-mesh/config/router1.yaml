@@ -1,0 +1,44 @@
+device: "Core-Router-01"
+bgp:
+  asn: 65001
+  router_id: "1.1.1.1"
+  neighbors:
+    - peer_ip: "192.168.1.2"
+      remote_as: 65002
+      state: "established"
+  routes:
+    advertised:
+      - "10.0.1.0/24"
+      - "10.0.2.0/24"
+    received:
+      - prefix: "20.0.1.0/24"
+        next_hop: "192.168.1.2"
+        as_path: "65002"
+      - prefix: "20.0.2.0/24"
+        next_hop: "192.168.1.2"
+        as_path: "65002"
+
+ospf:
+  process_id: 1
+  router_id: "1.1.1.1"
+  areas:
+    - area: "0.0.0.0"
+      networks:
+        - "192.168.1.0/24"
+  neighbors:
+    - neighbor_id: "2.2.2.2"
+      state: "full"
+      interface: "GigabitEthernet0/0"
+
+interfaces:
+  GigabitEthernet0/0:
+    ip: "192.168.1.1"
+    mask: "255.255.255.0"
+    status: "up"
+    protocol: "up"
+  GigabitEthernet0/1:
+    ip: "10.0.0.1"
+    mask: "255.255.255.0"
+    status: "up"
+    protocol: "up"
+

@@ -1,15 +1,28 @@
-# Environments
+# Environments and secrets
 .env
+.env.local
 .credentials.yaml
+projects/**/.env
+github_token
 
-# Databases
+# Databases and vector stores
 *.sqlite3
 *.db
 chroma/
+**/.chroma/
+knowledge_base/.chroma/
+
+# Cursor exports and internal notes
+cursor_*.md
+
+# Lab configs with real inventory UUIDs (keep examples only)
+config/[0-9a-f][0-9a-f][0-9a-f][0-9a-f]*.yaml
+config/*-*-*-*-*.yaml
 
 # Binaries/PDFs
 *.pdf
 *.bin
+*.pickle
 
 # Python
 __pycache__/
@@ -19,8 +32,14 @@ __pycache__/
 venv/
 ENV/
 env/
+.pytest_cache/
+uv.lock
 
 # IDEs
 .vscode/
 .idea/
 .cursor/
+
+# OS
+.DS_Store
+Thumbs.db
