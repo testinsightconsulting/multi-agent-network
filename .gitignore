@@ -14,6 +14,7 @@ knowledge_base/.chroma/
 
 # Cursor exports and internal notes
 cursor_*.md
+!docs/CURSOR_PORTFOLIO.md
 
 # Lab configs with real inventory UUIDs (keep examples only)
 config/[0-9a-f][0-9a-f][0-9a-f][0-9a-f]*.yaml
@@ -39,6 +40,8 @@ uv.lock
 .vscode/
 .idea/
 .cursor/
+!projects/cursor-agent-workflows/templates/.cursor/
+!projects/cursor-agent-workflows/templates/.cursor/**
 
 # OS
 .DS_Store

@@ -1,0 +1,13 @@
+---
+description: Lab multi-agent and MCP conventions for this monorepo
+globs:
+  - projects/**/*
+alwaysApply: false
+---
+
+# Lab agent conventions
+
+- Device agents are specialists; users talk to the Concierge only.
+- Orchestration topologies use `inventory_id` as the specialist `agent_id`.
+- MCP tools for NetBox are reference mocks unless connected to a real instance.
+- Do not commit `.env`, credentials, or Cursor chat exports.
