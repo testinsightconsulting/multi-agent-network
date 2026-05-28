@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  topology-orchestration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync
+        working-directory: projects/topology-orchestration
+      - run: uv run pytest
+        working-directory: projects/topology-orchestration
+
+  agent-doc-evaluator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync
+        working-directory: projects/agent-doc-evaluator
+      - run: uv run pytest
+        working-directory: projects/agent-doc-evaluator
+
+  netbox-lab-mcp-tools:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync
+        working-directory: projects/netbox-lab-mcp-tools
+      - run: uv run pytest
+        working-directory: projects/netbox-lab-mcp-tools
+
+  device-agent-mesh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync
+        working-directory: projects/device-agent-mesh
+      - run: uv run pytest -q
+        working-directory: projects/device-agent-mesh
