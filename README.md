@@ -54,6 +54,10 @@ See [docs/CURSOR_PORTFOLIO.md](docs/CURSOR_PORTFOLIO.md) for how each project ma
 
 - [claude-nexus](https://github.com/intisanchez/claude-nexus) — Claude Code master hub (skills, MCP registry, sysadmin)
 
+## Continuous integration
+
+CI workflow file: [docs/github-actions-ci.yml](docs/github-actions-ci.yml). Install instructions (including PAT `workflow` scope): [docs/GITHUB_ACTIONS.md](docs/GITHUB_ACTIONS.md).
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
